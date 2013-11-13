@@ -323,6 +323,7 @@
 		dwheel.timeout = wait(function() {
 			data.target.data(datakey).dragging = flags.dragging = false;
 			toggleThumbs(thumbs, options, data.wheel = null);
+			triggerEvent('wheelend', data.target);
 		}, settings.thumbTimeout);
 
 	}
